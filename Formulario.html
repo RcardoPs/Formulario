@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#titulo {
+    font-family: sans-serif;
+    color: #380b61;
+    margin-left: 3%;
+}
+
+#subtitulo {
+    font-family: sans-serif;
+    color: #380b61;
+    margin-left: 12%;
+}
+
+#check{
+    display: inline-block;
+}
+
+fieldset {
+    border: 0;
+}
+
+body{
+    background-color: #f0f8ff;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    margin-left: 36%;
+    margin-top: 3%;
+    justify-content: center;
+}
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    border-radius: 5px;
+}
+
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+
+.campo{
+margin-bottom: 1em;
+}
+
+.campo label {
+margin-bottom: 0.2em;
+color: #59429d;
+display: block;
+}
+
+fieldset.grupo .campo{
+
+    float: left;
+    margin-right: 1em;
+}
+
+
+
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgb(0,0,0,0,2);
+    display: block;
+}
+
+.campo select option{
+    padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus{
+    background: #e0e0f8 ;
+
+}
+.botao {
+    font-size: 1em;
+    background: #59429d;
+    border: 0;
+    margin-bottom: 0em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 110%;
+    left: 73%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao:hover {
+    background: #ccbbff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+.botao, select{
+    cursor: pointer;
+}
+
+
+</style>
+</head>
+
+
+<body>
+    <div>
+        <h1 id="titulo">Cadastro de Gamers</h1>
+        <p id="subtitulo">Insira suas informações:</p>
+        <br>
+
+    </div>
+
+
+<form>
+    <fieldset class="grupo">
+    <div class="campo">
+        <label for="nome"><strong> Nome</strong></label>        
+        <input type="text" name="nome" id="nome" required>
+    </div>
+
+    <div class="campo">
+        <label for="sobrenome"><strong>Sobrenome</strong></label>
+        <input type="text" name="sobrenome" id="sobrenome" required> 
+    </div>
+    </fieldset> 
+
+    <div class="campo">
+        <label for="email"><strong>E-mail</strong></label>
+        <input type="email" name="email" id="email" required>
+    </div> <br>  
+
+    <div class="campo">
+        <label><strong> Qual console você mais joga? </strong></label>
+        <label>
+            <input type="radio" name="gamer" value="pc" checked>Computador
+        </label>
+        <label>
+            <input type="radio" name="gamer" value="playstation">Playstation
+        </label>
+        <label>
+            <input type="radio" name="gamer" value="xbox">Xbox
+        </label>
+        <label>
+            <input type="radio" name="gamer" value="nintendo">Nintendo
+        </label>
+        <label>
+            <input type="radio" name="gamer" value="celular">Celular
+        </label>
+        <label>
+            <input type="radio" name="gamer" value="outro">Outro
+        </label>
+    </div>
+    <div class="campo">
+        <label for="frequencia"><strong>Qual a frequência que joga?</strong> </label>
+        <select id="frequencia">
+            <option selected disabled value="">Selecione</option>
+            <option>Todos os dias</option>
+            <option>Quase todos os dias</option>
+            <option>Três a quatro vezes na semana</option>
+            <option>As vezes</option>
+            <option>Raramente</option>
+        </select>
+    </div>
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione as categorias de jogos que você mais gosta:</strong></label><br><br>
+                <input type="checkbox" id="aventura" value="aventura">
+                <label for="aventura">Aventura</label>
+                <input type="checkbox" id="acao" value="acao">
+                <label for="acao">Ação</label>
+                <input type="checkbox" id="esportes" value="esportes">
+                <label for="esportes">Esportes</label>
+                <input type="checkbox" id="estrategia" value="estrategia">
+                <label for="estrategia">Estrategia</label><br>
+                <input type="checkbox" id="luta" value="luta">
+                <label for="luta">Luta</label>
+                <input type="checkbox" id="rpg" value="rpg">
+                <label for="rpg">RPG</label>
+                <input type="checkbox" id="simulacao" value="simulacao">
+                <label for="simulacao">Simulação</label>
+                <input type="checkbox" id="battler" value="battler">
+                <label for="battler">Battle Royale</label>
+            </div>
+
+        </fieldset>
+
+        <div class="campo">
+            <br>
+            <label><strong> Nos diga quais são seus jogos favoritos</strong></label>
+            <textarea rows="3" style="width: 26em;" name="jogofavorito" id="jogofavorito"></textarea>
+
+        </div>
+
+        <button class="botao" type="submit">Enviar</button>
+
+
+
+</form>
+
+
+
+
+</body>
+</html>
